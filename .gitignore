@@ -1,0 +1,17 @@
+# 私有草稿：课程、B2B 报价、亲子草稿
+_private/
+
+# Python
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.venv/
+venv/
+
+# Excel 临时文件
+~$*.xlsx
+*.tmp
+
+# 系统文件
+.DS_Store
+Thumbs.db
