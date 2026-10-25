@@ -2,6 +2,10 @@
 
 第 1 章《此朝无钱胜有钱》的可玩版本：选 A/B/C/D → 看短期后果 → 历史揭晓 → 本章机制。
 
+## 线上
+
+https://justinjchen-cornell.github.io/Ledger-of-Empires/
+
 ## 本地预览
 
 ```bash

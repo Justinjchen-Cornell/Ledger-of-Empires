@@ -30,6 +30,8 @@ python scripts/validate.py --all
 
 ## 互动故事
 
+线上：https://justinjchen-cornell.github.io/Ledger-of-Empires/
+
 第 1 章可玩版本：`05-输出/工作台/story.html`。本地预览见 `05-输出/工作台/README.md`。
 
 ## 许可
