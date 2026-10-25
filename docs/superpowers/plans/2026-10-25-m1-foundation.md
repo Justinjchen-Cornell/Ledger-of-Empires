@@ -95,7 +95,7 @@ def test_required_files_exist():
 
 def test_progress_table_has_24_chapters():
     text = (ROOT / "00-总控/进度表.md").read_text(encoding="utf-8")
-    rows = [line for line in text.splitlines() if line.startswith("| 书")]
+    rows = [line for line in text.splitlines() if line.startswith(("| 书1", "| 书2"))]
     assert len(rows) == 24
 
 def test_glossary_has_all_kernels():
