@@ -396,12 +396,14 @@ def _extract(lines, starts, titles, book):
     return chapters
 
 
-def split_book1(text: str, toc_count: int = 12):
+def split_book1(text: str, toc_count: int | None = None):
     lines = text.splitlines()
     starts = [
         i for i, line in enumerate(lines)
         if re.match(r"^第[一二三四五六七八九十]+章\s*$", line.strip())
     ]
+    if toc_count is None:
+        toc_count = 12 if len(starts) >= 24 else 0
     return _extract(lines, starts[toc_count:], BOOK1_TITLES, 1)
 
 
