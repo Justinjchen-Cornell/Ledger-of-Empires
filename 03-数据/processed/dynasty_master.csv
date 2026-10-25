@@ -1,0 +1,8 @@
+﻿period_id,dynasty,start_year,end_year,currency_regime,land_system,tax_system,notes
+HAN_WEST,西汉,-202,8,荚钱→四铢→五铢,名田/限田,十五税一,吕后时期大通胀
+XIN,新朝,9,23,宝货制,王田制,五均六筦,王莽币改
+EASTERN_HAN,东汉,25,220,五铢,豪强兼并,田租/算赋,四出五铢
+QI,齐国,-685,-643,刀币（造邦刀）,授田/均田,轻徭薄役+官山海,齐桓公称霸
+WU,吴国,-514,-473,,,,夫差；为越所灭
+YUE,越国,-496,-473,蚁鼻钱,,,勾践灭吴
+HENG_SHAN,衡山国,,,兵器/粮食,,,衡山之谋
