@@ -1,3 +1,5 @@
 ﻿period_id,year,good,unit,price_nominal,price_grams_silver,source_id,evidence_grade
 XIN,11,谷,石,10000,,S002,B
 EASTERN_HAN,190,谷,斛,1000000,,S003,B
+HENG_SHAN,-671,谷,石,15,,S006,B
+HENG_SHAN,-671,谷,石,50,,S006,B
