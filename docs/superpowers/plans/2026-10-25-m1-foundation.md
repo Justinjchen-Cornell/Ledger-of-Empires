@@ -32,7 +32,7 @@
 |---|---|
 | `README.md` | 项目说明、状态、快速开始 |
 | `LICENSE` / `LICENSE-CONTENT` | 代码 MIT / 文字 CC BY-NC-SA 4.0 |
-| `requirements.txt` / `pytest.ini` | Python 依赖与测试配置 |
+| `requirements.txt` / `pytest.ini` / `conftest.py` | Python 依赖、测试配置、路径注入 |
 | `00-总控/作战卡.md` | 目标、范围、节奏、里程碑 |
 | `00-总控/进度表.md` | 24 章状态 |
 | `00-总控/决策日志.md` | 设计决策记录 |
@@ -66,6 +66,7 @@
 - Create: `LICENSE-CONTENT`
 - Create: `requirements.txt`
 - Create: `pytest.ini`
+- Create: `conftest.py`
 - Create: `00-总控/作战卡.md`
 - Create: `00-总控/进度表.md`
 - Create: `00-总控/决策日志.md`
@@ -86,7 +87,7 @@ ROOT = Path(__file__).resolve().parents[1]
 
 def test_required_files_exist():
     required = [
-        "README.md", "LICENSE", "LICENSE-CONTENT", "requirements.txt", "pytest.ini",
+        "README.md", "LICENSE", "LICENSE-CONTENT", "requirements.txt", "pytest.ini", "conftest.py",
         "00-总控/作战卡.md", "00-总控/进度表.md", "00-总控/决策日志.md", "00-总控/术语表.md",
     ]
     for rel in required:
@@ -178,6 +179,17 @@ testpaths = tests
 addopts = -q
 ```
 
+`conftest.py`:
+
+```python
+import sys
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parent
+if str(ROOT) not in sys.path:
+    sys.path.insert(0, str(ROOT))
+```
+
 `00-总控/作战卡.md`:
 
 ```markdown
@@ -238,7 +250,7 @@ Expected: PASS（3 passed）。
 - [ ] **Step 5: Commit**
 
 ```bash
-git add README.md LICENSE LICENSE-CONTENT requirements.txt pytest.ini 00-总控 tests/test_repo_skeleton.py
+git add README.md LICENSE LICENSE-CONTENT requirements.txt pytest.ini conftest.py 00-总控 tests/test_repo_skeleton.py
 git commit -m "chore: add repo skeleton and governance files"
 ```
 
