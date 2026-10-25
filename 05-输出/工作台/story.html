@@ -2,8 +2,14 @@
 <html lang="zh-CN">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>三千年账本 · 互动故事</title>
+  <meta name="description" content="三千年账本互动故事：第 1 章 此朝无钱胜有钱。选择 → 后果 → 历史揭晓。">
+  <meta name="theme-color" content="#8b3a2b">
+  <meta property="og:title" content="三千年账本 · 第 1 章 此朝无钱胜有钱">
+  <meta property="og:description" content="选 A/B/C/D → 看短期后果 → 历史揭晓 → 本章机制。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://justinjchen-cornell.github.io/Ledger-of-Empires/">
   <link rel="stylesheet" href="story.css">
 </head>
 <body>
@@ -13,8 +19,9 @@
       <h1 id="title">加载中…</h1>
       <div id="subtitle" class="subtitle"></div>
       <div id="progress" class="progress"></div>
+      <div class="progress-track" aria-hidden="true"><span id="progress-fill"></span></div>
     </header>
-    <section id="scene" class="scene"></section>
+    <section id="scene" class="scene" aria-live="polite"></section>
     <div id="choices" class="choices"></div>
     <div class="actions">
       <button id="restart" class="ghost" type="button">重新开始</button>
@@ -23,6 +30,7 @@
       <span id="card" class="card-badge"></span>
     </footer>
   </main>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
   <script src="story.js"></script>
 </body>
 </html>

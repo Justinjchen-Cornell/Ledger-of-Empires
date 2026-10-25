@@ -51,3 +51,8 @@ def test_reachable_end(path, data):
         if "next" in scene:
             stack.append(scene["next"])
     assert any(scenes[name].get("card") for name in seen)
+
+@pytest.mark.parametrize("path,data", load_all())
+def test_history_matches_acts(path, data):
+    acts = {str(scene["act"]) for scene in data["scenes"].values() if scene.get("act")}
+    assert set(data.get("history", {}).keys()) == acts
