@@ -7,7 +7,7 @@ CHAPTER_FM = ["book", "chapter", "title", "kernels", "status", "estimated_minute
 CARD_FM = ["id", "kernel", "dynasty", "year", "title", "evidence_grade", "source_lines", "hands_on", "status"]
 CHAPTER_SECTIONS = [
     "## 1. 本章定位", "## 2. 三幕故事", "## 3. 决策点", "## 4. 五层追问",
-    "## 5. 原文摘句", "## 6. 数据与建模", "## 7. 卡片草案",
+    "## 5. 原文摘句", "## 6. 数据与建模", "## 7. 卡片草案", "## 8. 核心总结",
 ]
 CARD_SECTIONS = [
     "## 处境", "## 约束", "## 选项", "## 决策与结果", "## 代价", "## 机制",
