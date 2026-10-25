@@ -28,6 +28,10 @@ pytest -q
 python scripts/validate.py --all
 ```
 
+## 互动故事
+
+第 1 章可玩版本：`05-输出/工作台/story.html`。本地预览见 `05-输出/工作台/README.md`。
+
 ## 许可
 
 代码 MIT；文字 CC BY-NC-SA 4.0。书籍原文不在本仓库，章节包只含原创摘要和短引文。

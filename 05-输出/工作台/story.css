@@ -1,0 +1,54 @@
+:root {
+  --paper: #f6f1e7;
+  --ink: #1f1b16;
+  --muted: #6b6257;
+  --accent: #8b3a2b;
+  --line: #d8cbb8;
+  --card: #fffaf0;
+  --hover: #f1e4d0;
+  --shadow: 0 10px 30px rgba(60, 40, 20, 0.08);
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: radial-gradient(circle at 20% 0%, #fbf7ef, var(--paper) 60%);
+  color: var(--ink);
+  font-family: "Noto Serif SC", "Songti SC", "SimSun", Georgia, serif;
+  line-height: 1.9;
+}
+.story { max-width: 760px; margin: 0 auto; padding: 48px 24px 64px; }
+.kicker { font-size: 12px; letter-spacing: .2em; color: var(--accent); }
+h1 { font-size: 32px; margin: 8px 0 4px; font-weight: 700; }
+.subtitle { color: var(--muted); font-size: 15px; }
+.progress { margin-top: 16px; font-size: 13px; color: var(--muted); }
+.scene {
+  margin-top: 28px; padding: 28px; background: var(--card);
+  border: 1px solid var(--line); border-radius: 18px; box-shadow: var(--shadow);
+}
+.scene h2 { margin: 0 0 16px; font-size: 22px; color: var(--accent); }
+.text { margin: 0; white-space: pre-wrap; font-size: 17px; }
+.choices { display: grid; gap: 12px; margin-top: 20px; }
+button { font: inherit; cursor: pointer; border-radius: 12px; }
+.choice {
+  width: 100%; text-align: left; padding: 16px 18px; background: var(--card);
+  border: 1px solid var(--line); color: var(--ink); transition: .15s ease;
+}
+.choice:hover { background: var(--hover); transform: translateY(-1px); }
+.continue { width: 100%; padding: 14px 18px; background: var(--accent); color: #fff; border: none; }
+.continue:hover { filter: brightness(1.05); }
+.actions { margin-top: 20px; display: flex; justify-content: flex-end; }
+.ghost { background: transparent; border: 1px solid var(--line); color: var(--muted); padding: 8px 14px; }
+.card-badge { display: none; }
+.card-badge.visible {
+  display: inline-block; margin-top: 20px; padding: 8px 12px;
+  background: #efe2cf; border-radius: 999px; font-size: 13px; color: var(--accent);
+}
+.recap { margin-top: 24px; padding-top: 16px; border-top: 1px dashed var(--line); }
+.recap ol { margin: 8px 0 0; padding-left: 20px; }
+.error { color: #a12b1f; }
+@media (max-width: 520px) {
+  .story { padding: 28px 16px 48px; }
+  h1 { font-size: 26px; }
+  .scene { padding: 20px; }
+  .text { font-size: 16px; }
+}
